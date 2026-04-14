@@ -19,4 +19,14 @@ Resrach more about altenatives to Loopj
 SharedPreferences is an Android API used to store <b>persistent key-value data</b> in a local XML file within the app’s internal storage.
 It's like a local storage.<br>
 <b>Types of SharedPreferences</b><br>
-<b>1. getPreferences()</b>
+<b>1. getPreferences()</b><br>
+Used for a <b>single activity-specific file</b>:"SharedPreferences prefs = getPreferences(MODE_PRIVATE);"<br>
+<b>2.getSharedPreferences()</b><br>
+Used when you want <b>multiple preference files</b>:"SharedPreferences prefs = getSharedPreferences("my_prefs", MODE_PRIVATE);"<br>
+<b>3. getDefaultSharedPreferences()</b><br>
+Uses a <b>default file across the app</b>:"SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);"<br>
+<b>• Context.MODE_PRIVATE</b>: This is the <b>only mode you should never use</b> because exposes your data to other apps on the device.<br> 
+<b>📌 Important exam point:</b><br>
+Use getSharedPreferences() for custom files
+Use getDefaultSharedPreferences() for global app settings
+

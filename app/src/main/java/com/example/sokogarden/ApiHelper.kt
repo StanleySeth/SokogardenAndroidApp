@@ -19,7 +19,7 @@ import org.json.JSONObject
 class ApiHelper(var context: Context) {
     //POST
     fun post(api: String, params: RequestParams) {
-        Toast.makeText(context, "Please wait for response", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, "🙏🏿Please wait for response", Toast.LENGTH_LONG).show()
         val client = AsyncHttpClient(true, 80, 443)
 
         client.post(api, params, object : JsonHttpResponseHandler() {

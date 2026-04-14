@@ -1,9 +1,8 @@
-
 package com.example.sokogarden
 
-import android.R.attr.data
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -24,43 +23,41 @@ class Signin : AppCompatActivity() {
             insets
         }
 
-//        Find the two EditText, a button and a textview by their ID
+        // Find views
         val email = findViewById<EditText>(R.id.email)
         val password = findViewById<EditText>(R.id.password)
         val signinButton = findViewById<Button>(R.id.signinBtn)
         val signupTextView = findViewById<TextView>(R.id.signuptxt)
 
-//        On the TextView set onClick listener to open the signup activity
+        // Set the formatted text for signupTextView
+        signupTextView.text = Html.fromHtml(getString(R.string.signup_text), Html.FROM_HTML_MODE_LEGACY)
+
+        // On the TextView set onClick listener to open the signup activity
         signupTextView.setOnClickListener {
             val intent = Intent(applicationContext, Signup::class.java)
             startActivity(intent)
         }
-//        onClick of the button signin, we need to interact with the API that we need to pass
+
+        // onClick of the button signin, we need to interact with the API
         signinButton.setOnClickListener {
-//            Specify the API endpoint
-            val api = "https://kbenkamotho.alwaysdata.net/api/signin"
+            // Validate entries
+            val mail = email.text.toString().trim()
+            val pass = password.text.toString().trim()
 
-//                        Create a request params object
-            val data = RequestParams()
+            if (mail.isEmpty()) {
+                email.error = "Please enter your email"
+            } else if (pass.isEmpty()) {
+                password.error = "Please enter your password"
+            } else {
+                // If all fields are input, proceed to API call
+                val api = "https://sethstanley.alwaysdata.net/api/signin"
+                val data = RequestParams()
+                data.put("email", mail)
+                data.put("password", pass)
 
-//                        Append the email and password to the API
-
-            data.put("email", email.text.toString())
-            data.put("password", password.text.toString())
-
-//            Import the API helper
-            val helper = ApiHelper(applicationContext)
-
-//            By use of the function post_login inside of the helper class, post your data
-            helper.post_login(api, data)
-
-
-
-
+                val helper = ApiHelper(applicationContext)
+                helper.post_login(api, data)
+            }
         }
-
-
-
-
     }
 }

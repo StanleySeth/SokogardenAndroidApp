@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Sokogarden</string>
     <string name="signup_text">Don\'t have an account? <font color="#03A9F4"><u>Signup</u></font></string>
+    <string name="signin_text">Already have an account? <font color="#03A9F4"><u>Signin</u></font></string>
 </resources>
