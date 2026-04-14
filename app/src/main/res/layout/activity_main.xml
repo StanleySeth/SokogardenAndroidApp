@@ -13,7 +13,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SokoGarden"
+        android:text="✨SokoGarden✨"
+        android:fontFamily="serif"
         android:textAlignment="center"
         android:textSize="38sp"
         android:background="@drawable/shape"
@@ -27,7 +28,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Signup"
+            android:text="👤Signup"
             android:id="@+id/signupBtn"
             android:textSize="25sp"
             android:padding="10dp"
@@ -39,7 +40,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Signin"
+            android:text="👮Signin"
             android:id="@+id/signinBtn"
             android:textSize="25sp"
             android:padding="10dp"
