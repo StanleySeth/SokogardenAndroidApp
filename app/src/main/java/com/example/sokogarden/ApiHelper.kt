@@ -101,9 +101,9 @@ fun loadProducts(url: String, recyclerView: RecyclerView, progressBar: ProgressB
             response: JSONArray
         ) {
             progressBar?.visibility = View.GONE
-            // val productList = ProductAdapter.fromJsonArray(response)
-            // val adapter = ProductAdapter(productList)
-            // recyclerView.adapter = adapter
+             val productList = ProductAdapter.fromJsonArray(response)
+             val adapter = ProductAdapter(productList)
+             recyclerView.adapter = adapter
         }
 
         override fun onFailure(

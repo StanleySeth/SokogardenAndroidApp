@@ -3,6 +3,7 @@ package com.example.sokogarden
 import android.content.Intent
 import android.os.Bundle
 import android.text.Html
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -53,12 +54,14 @@ class Signup : AppCompatActivity() {
                 username.error = "Please enter your username"
             } else if (mail.isEmpty()) {
                 email.error = "Please enter your email"
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
+                email.error = "Please enter a valid email address"
             } else if (pass.isEmpty()) {
                 password.error = "Please enter your password"
             } else if (phn.isEmpty()) {
                 phone.error = "Please enter your phone number"
             } else {
-                // If all fields are input, proceed to API call
+                // If all fields are input and valid, proceed to API call
                 val api = "https://sethstanley.alwaysdata.net/api/signup"
                 val data = RequestParams()
                 data.put("username", uName)
@@ -70,7 +73,6 @@ class Signup : AppCompatActivity() {
                 helper.post(api, data)
 
                 // Optional: Clear fields after successful submission attempt
-                // (Note: Usually this happens in the API success callback, but keeping it here as per previous logic)
                 email.text.clear()
                 password.text.clear()
                 username.text.clear()
