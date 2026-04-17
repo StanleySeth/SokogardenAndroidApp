@@ -1,10 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
     tools:context=".PaymentActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--    Below is a TextView-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Complete Payment With M-Pesa"
+        android:textAlignment="center"
+        android:textColor="#04A30A"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <!--    Below is a cardview that holds all our contents -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#4C11BA"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="12dp">
+
+        <!--        Below is a LinearLayout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D7C9F1"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!--            Below is a TextView where the name of the product will be attached-->
+            <TextView
+                android:id="@+id/txtProductName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Product Name"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <!--            Below is our ImageView for the product_image-->
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+<!--            Below is the TextView for the product_cost-->
+            <TextView
+                android:id="@+id/txtProductCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="KES 1000"
+                android:textColor="#2a1369"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+<!--            Below is the TextView for the product_description-->
+            <TextView
+                android:id="@+id/product_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Product Description" />
+
+            <!--            Below is an EditText for entering mobile number-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPhone"
+                android:hint="Enter Phone Number e.g 2547XXXXXXXX"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#bafce6" />
+
+<!--            Below is a Button to complete the action-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnPay"
+                android:text="PAY NOW"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#6650b5"
+                android:textColor="#dbc740"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
