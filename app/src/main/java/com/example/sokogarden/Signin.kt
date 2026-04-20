@@ -53,7 +53,7 @@ class Signin : AppCompatActivity() {
                 password.error = "Please enter your password"
             } else {
                 // If all fields are input and valid, proceed to API call
-                val api = "https://sethstanley.alwaysdata.net/api/signin"
+                val api = "https://stanleyseth.alwaysdata.net/api/signin"
                 val data = RequestParams()
                 data.put("email", mail)
                 data.put("password", pass)

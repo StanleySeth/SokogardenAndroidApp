@@ -43,7 +43,7 @@ class PaymentActivity : AppCompatActivity() {
 
 
 //        Specify the image url
-        val imageUrl = "https://sethstanley.alwaysdata.net/static/images/$product_photo"
+        val imageUrl = "https://stanleyseth.alwaysdata.net/static/images/$product_photo"
 
 
         Glide.with(this)
@@ -58,7 +58,7 @@ class PaymentActivity : AppCompatActivity() {
 //        Set a click listener on the button
         btnPay.setOnClickListener {
 //            Specify the api endpoint for making payments
-            val api = "https://sethstanley.alwaysdata.net/api/mpesa_payment"
+            val api = "https://stanleyseth.alwaysdata.net/api/mpesa_payment"
 
 //            Create the requestParams
             val data = RequestParams()

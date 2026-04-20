@@ -40,13 +40,23 @@ class MainActivity : AppCompatActivity() {
         val progressBar = findViewById<ProgressBar>(R.id.progressbar)
 
 //        Specify the API URL endpoint for fetching the products from alwaysdata
-        val url = "https://sethstanley.alwaysdata.net/api/get_products"
+        val url = "https://stanleyseth.alwaysdata.net/api/get_products"
 
 //        import the helper class
         val helper = ApiHelper(applicationContext)
 
 //        Inside the helper class, we call the loadProducts function
         helper.loadProducts(url, recyclerView, progressBar)
+
+//        Find the about button by use of its id and have the intent to the about activity
+        val aboutBtn = findViewById<Button>(R.id.aboutBtn)
+
+//        Below is the intent of the aboutBtn id to navigate to the about activity
+        aboutBtn.setOnClickListener {
+            val intent = Intent(applicationContext, About::class.java)
+            startActivity(intent)
+        }
+
 
 
 

@@ -39,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:src="@mipmap/ic_launcher"
-                    android:scaleType="centerCrop"
+                    android:scaleType="fitXY"
                     android:layout_marginTop="3dp" />
 
 <!--            Below is a TextView of the Product_cost-->

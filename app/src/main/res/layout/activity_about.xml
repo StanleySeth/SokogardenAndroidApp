@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#142331"
+    tools:context=".About">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:textStyle="bold"
+        android:textSize="42sp"
+        android:textColor="#FFF"
+        android:textAlignment="center" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="#d9bdb6"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aboutTxt"
+                android:text="Welcome to our E-commerce application, a simple user friendly platform designed to make online shopping easy and accesssible for everyone. Users can quickly create accents, securely log in and browse a wide range of products with detailed description and the product photos. Our seemly checkout process allwos customers to pay conviniently by use of Mpesa. We have and look forward to be working and doing business with you. "
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:textColor="#732e1d"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp" />
+
+            <!-- Voice Selector Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔊 Select AI Voice"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#732e1d"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp" />
+
+            <Spinner
+                android:id="@+id/voiceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/spinner_background"
+                android:padding="8dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="🎙️Know Us"
+                android:id="@+id/btnListen"
+                android:textSize="25sp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:backgroundTint="#1435a3" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

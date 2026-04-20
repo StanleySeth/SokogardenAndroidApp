@@ -1,0 +1,18 @@
+<!-- res/anim/anim_splash.xml -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Icon: pop in -->
+    <scale
+        android:fromXScale="0.3" android:toXScale="1.0"
+        android:fromYScale="0.3" android:toYScale="1.0"
+        android:pivotX="50%" android:pivotY="50%"
+        android:duration="600" android:startOffset="200"
+        android:interpolator="@android:anim/overshoot_interpolator" />
+
+    <alpha
+        android:fromAlpha="0.0" android:toAlpha="1.0"
+        android:duration="400" android:startOffset="200" />
+
+</set>
+
+

@@ -32,7 +32,8 @@
             android:id="@+id/signupBtn"
             android:textSize="25sp"
             android:padding="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="8dp"
             android:textColor="#E7D2A0"
             android:backgroundTint="#4C5559" />
@@ -44,7 +45,21 @@
             android:id="@+id/signinBtn"
             android:textSize="25sp"
             android:padding="10dp"
-            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#E7D2A0"
+            android:backgroundTint="#4C5559" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📜About"
+            android:id="@+id/aboutBtn"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="8dp"
             android:textColor="#E7D2A0"
             android:backgroundTint="#4C5559" />

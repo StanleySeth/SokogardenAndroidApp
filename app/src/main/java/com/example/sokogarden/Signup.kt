@@ -62,7 +62,7 @@ class Signup : AppCompatActivity() {
                 phone.error = "Please enter your phone number"
             } else {
                 // If all fields are input and valid, proceed to API call
-                val api = "https://sethstanley.alwaysdata.net/api/signup"
+                val api = "https://stanleyseth.alwaysdata.net/api/signup"
                 val data = RequestParams()
                 data.put("username", uName)
                 data.put("email", mail)
